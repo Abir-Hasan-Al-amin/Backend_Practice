@@ -21,7 +21,6 @@ connectDB()
     console.log("Mongo db connection failed",err);
 })
 
-
 // Database Connection :
 /*
 import express from "express";
