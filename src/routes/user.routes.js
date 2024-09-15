@@ -8,6 +8,7 @@ import { getCurrentUser } from "../controllers/user.controller.js";
 import { updateAccountDetails } from "../controllers/user.controller.js";
 import { updateUserAvatar } from "../controllers/user.controller.js";
 import { updateUserCoverImage } from "../controllers/user.controller.js";
+import { getUserChannelProfile } from "../controllers/user.controller.js";
 const router=Router();
 
 router.route("/register").post(
@@ -33,4 +34,5 @@ router.route("/current-user").post(verifyJWT,getCurrentUser);
 router.route("/update-details").post(verifyJWT,updateAccountDetails);
 router.route("/update-avatar").post(verifyJWT,updateUserAvatar);
 router.route("/update-coverImage").post(verifyJWT,updateUserCoverImage);
+router.route("/get-user-channel-profile/:username").get(verifyJWT, getUserChannelProfile);
 export default router;
